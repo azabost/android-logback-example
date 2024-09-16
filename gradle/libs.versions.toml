@@ -1,0 +1,41 @@
+[versions]
+desugar_jdk_libs = "2.1.2"
+kotlin = "1.9.24"
+androidGradlePlugin = "8.6.0"
+slf4j = "2.0.13"
+logbackClassic = "1.3.14" # Don't update above 1.3.x to keep it compatible with Android
+crashlytics = "19.1.0"
+crashlyticsPlugin = "3.0.2"
+googlePlayServices = "4.4.2"
+
+[libraries]
+# Plugins treated as libraries for buildSrc
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+# Logging
+slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logbackClassic" }
+
+# Android
+androidx-activity = { module = "androidx.activity:activity-ktx", version = "1.9.2" }
+
+# Firebase
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "crashlytics" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm" }
+kotlin-android = { id = "org.jetbrains.kotlin.android" }
+android-library = { id = "com.android.library" }
+android-application = { id = "com.android.application" }
+
+# Firebase
+googlePlayServices = { id = "com.google.gms.google-services", version.ref = "googlePlayServices" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPlugin" }
+
+# From buildSrc
+default-android-application = { id = "default.android.application" }
+default-android-library = { id = "default.android.library" }
+default-kotlin-library = { id = "default.kotlin.library" }

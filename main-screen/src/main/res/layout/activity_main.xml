@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/logInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log info" />
+
+    <Button
+        android:id="@+id/logError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log error" />
+
+    <Button
+        android:id="@+id/testCrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test crash" />
+
+</LinearLayout>
